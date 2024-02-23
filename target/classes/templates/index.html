@@ -1,0 +1,97 @@
+<!DOCTYPE>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport"
+	content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+	<title>E-Comm Order App</title>
+	
+	<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+	
+	<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script type="text/javascript"
+	th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/index.js}"></script>
+	 <link th:href="@{/css/index.css}" rel="stylesheet" />
+	 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+<br><br><br>
+
+<button id="getAllOrdersButton" type="button" class="btn btn-info">Get All Orders</button>
+
+<button id="createNewOrder" type="button" class="btn btn-info">create new order</button>
+
+</div>
+
+<div class="container">
+
+<table class="table table-striped" id="orderTable" style="width:100%">
+
+<thead>
+
+<tr>
+
+<td>Order Id</td>
+
+<td>Transaction Id</td>
+
+<td>Customer Name</td>
+
+<td>Product Name</td>
+
+<td>Price</td>
+
+<td>Full Address</td>
+
+<td>Payment Type</td>
+
+<td>Order Status</td>
+
+</tr>
+
+</thead>
+
+</table>
+
+</div>
+	<div id="createNewForm" class="container">
+ <form>
+  <label for="Pname">Product Name</label><br>
+  <input type="text" id="Pname" name="pname"><br>
+  <h5 id="usercheck" style="color: red;">
+                        **product name is missing
+                    </h5>
+  <label for="Cname">Customer Name</label><br>
+  <input type="text" id="Cname" name="Cname"><br>
+  <h5 id="customerCheck" style="color: red;">
+                        **customer name is missing
+                    </h5>
+  
+  <label for="Ptype">Payment Type</label><br>
+  <input type="text" id="Ptype" name="Ptype"><br>
+  <h5 id="paymenttype" style="color: red;">
+                        **payment type is missing
+                    </h5>
+  <label for="fullAddress">fullAddress</label><br>
+  <input type="text" id="fullAddress" name="fullAddress"><br>
+    <h5 id="fulladress" style="color: red;">
+                        ** full adress is missing
+                    </h5>
+  <input id="submitbtn" type="submit" value="Submit">
+</form>
+
+	
+	</div>
+	<div class="container">
+		<table id="orderTable">
+		</table>
+	</div>
+</body>
+</html>
